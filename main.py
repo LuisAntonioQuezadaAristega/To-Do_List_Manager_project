@@ -21,9 +21,6 @@ class list:
     def show_tasks(self):
         for index in range(len(self.tasks)):
             print((self.tasks[index]).name)
-            print((self.tasks[index]).description)
-            print((self.tasks[index]).state)
-            print((self.tasks[index]).end_day)
 
     # Feature added
     def get_task(self, name):
