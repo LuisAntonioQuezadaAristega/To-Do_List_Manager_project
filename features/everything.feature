@@ -17,14 +17,14 @@ Feature: Task and List functions
         - Pay bills
 
     Scenario: Mark a task as completed
-        Given the to-do list contains tasks:
+        Given the to-do list contains task:
         | Task | Status |
         | Buy groceries | Pending |
         When the user marks task "Buy groceries" as completed
         Then the to-do list should show task "Buy groceries" as completed
 
     Scenario: Clear the entire to-do list
-        Given the to-do list contains tasks:
+        Given to-do list contains tasks:
         | Task |
         | Buy groceries |
         | Pay bills |
@@ -32,14 +32,14 @@ Feature: Task and List functions
         Then the to-do list should be empty
     
     Scenario: Show the number of unfinished tasks
-        Given the to-do list contains tasks:
+        Given to-do list contains task:
         | Task | Status |
         | Buy groceries | Pending |
         When the user count the unfinished tasks
-        Then the output should contain:
+        Then the output should be:
         - there are 1 task unfinished
 
     Scenario: Find a task in the to-do list
-        Given a to-do list that is empty
+        Given a empty to-do list
         When the user look for the task "Buy groceries"
         Then the output should be -1

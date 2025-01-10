@@ -45,6 +45,7 @@ class list:
             if (self.tasks[index]).state != "Complete":
                 total += 1
         print("there are", total, "tasks unfinished")
+        return total
 
     def clear(self):
         self.tasks.clear()
